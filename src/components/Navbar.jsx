@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
+import { Menu, X, Youtube, Instagram, Mail } from 'lucide-react'
 
 function NavLink({ href, children, onClick }) {
   return (
@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const links = [
     { label: 'Home', href: '#home' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'Edits', href: '#projects' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ]
@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/60 px-4 py-3 backdrop-blur-md">
           <a href="#home" className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-lg" />
-            <span className="text-white font-semibold tracking-tight">Naukhaiz</span>
+            <span className="text-white font-semibold tracking-tight">Video Editor</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -35,8 +35,8 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Github size={18} /></a>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Linkedin size={18} /></a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Youtube size={18} /></a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Instagram size={18} /></a>
             <a href="#contact" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Mail size={18} /></a>
           </div>
 
@@ -53,8 +53,8 @@ export default function Navbar() {
               </a>
             ))}
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Github size={18} /></a>
-              <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Linkedin size={18} /></a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Youtube size={18} /></a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Instagram size={18} /></a>
               <a href="#contact" className="p-2 rounded-lg bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"><Mail size={18} /></a>
             </div>
           </div>

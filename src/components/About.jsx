@@ -5,24 +5,26 @@ export default function About() {
         <div className="order-2 lg:order-1">
           <h2 className="text-3xl md:text-4xl font-semibold text-white">About</h2>
           <p className="mt-4 text-slate-300 leading-relaxed">
-            I'm a frontend engineer with a love for motion and micro-interactions. I design and build rich interfaces with a strong focus on performance and accessibility. When I'm not coding, I'm exploring new visual languages and prototyping ideas.
+            I'm a video editor focused on story and rhythm. I specialize in fast-paced social cuts, cinematic commercial edits,
+            and motion-driven intros that keep viewers watching. My toolkit includes Premiere Pro, After Effects, DaVinci Resolve,
+            and a strong ear for sound design.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-3xl font-semibold text-white">5+ yrs</p>
-              <p className="text-slate-400 text-sm">Experience</p>
+              <p className="text-3xl font-semibold text-white">150M+</p>
+              <p className="text-slate-400 text-sm">Total views</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-3xl font-semibold text-white">20+</p>
-              <p className="text-slate-400 text-sm">Projects</p>
+              <p className="text-3xl font-semibold text-white">6 yrs</p>
+              <p className="text-slate-400 text-sm">Editing experience</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-3xl font-semibold text-white">10+</p>
-              <p className="text-slate-400 text-sm">Clients</p>
+              <p className="text-3xl font-semibold text-white">50+</p>
+              <p className="text-slate-400 text-sm">Clients & creators</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="text-3xl font-semibold text-white">100k+</p>
-              <p className="text-slate-400 text-sm">Users reached</p>
+              <p className="text-3xl font-semibold text-white">48h</p>
+              <p className="text-slate-400 text-sm">Typical turnaround</p>
             </div>
           </div>
         </div>

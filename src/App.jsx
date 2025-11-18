@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Reel from './components/Reel'
 import About from './components/About'
 import Contact from './components/Contact'
 
@@ -14,13 +15,14 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Reel />
         <Projects />
         <About />
         <Contact />
       </main>
 
       <footer className="border-t border-white/10 py-10 text-center text-slate-400">
-        <p>© {new Date().getFullYear()} Naukhaiz. Built with love and a bit of playfulness.</p>
+        <p>© {new Date().getFullYear()} Video Editor Portfolio. Cut with care.</p>
       </footer>
     </div>
   )
