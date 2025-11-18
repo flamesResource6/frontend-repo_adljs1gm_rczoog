@@ -1,4 +1,5 @@
 import { ExternalLink, Youtube, Scissors, PlayCircle } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const demoEdits = [
   {
@@ -21,9 +22,15 @@ const demoEdits = [
   },
 ]
 
-function ProjectCard({ p }) {
+function ProjectCard({ p, index }) {
   return (
-    <div className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ delay: 0.05 * index, duration: 0.4 }}
+      className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition overflow-hidden"
+    >
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none bg-gradient-to-br from-blue-500/10 to-cyan-400/10" />
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-white text-xl font-semibold">{p.title}</h3>
@@ -38,10 +45,10 @@ function ProjectCard({ p }) {
         ))}
       </div>
       <div className="mt-5 flex items-center gap-3">
-        <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sky-300 hover:text-sky-200"><Youtube size={16}/> Watch</a>
-        <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-slate-300 hover:text-slate-200"><ExternalLink size={16}/> Open</a>
+        <motion.a whileHover={{ x: 2 }} href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sky-300 hover:text-sky-200"><Youtube size={16}/> Watch</motion.a>
+        <motion.a whileHover={{ x: 2 }} href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-slate-300 hover:text-slate-200"><ExternalLink size={16}/> Open</motion.a>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -51,15 +58,15 @@ export default function Projects() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white">Selected Edits</h2>
-            <p className="mt-2 text-slate-300">Commercials, YouTube, music visuals, and brand films.</p>
+            <motion.h2 initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="text-3xl md:text-4xl font-semibold text-white">Selected Edits</motion.h2>
+            <motion.p initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.4 }} className="mt-2 text-slate-300">Commercials, YouTube, music visuals, and brand films.</motion.p>
           </div>
-          <a href="#reel" className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 text-white border border-white/10 hover:bg-white/15"><PlayCircle size={18}/> Watch Reel</a>
+          <motion.a whileHover={{ scale: 1.03 }} href="#reel" className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 text-white border border-white/10 hover:bg-white/15"><PlayCircle size={18}/> Watch Reel</motion.a>
         </div>
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {demoEdits.map((p) => (
-            <ProjectCard key={p.title} p={p} />
+          {demoEdits.map((p, idx) => (
+            <ProjectCard key={p.title} p={p} index={idx} />
           ))}
         </div>
       </div>

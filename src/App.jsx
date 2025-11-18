@@ -4,6 +4,7 @@ import Projects from './components/Projects'
 import Reel from './components/Reel'
 import About from './components/About'
 import Contact from './components/Contact'
+import { motion } from 'framer-motion'
 
 function App() {
   return (
@@ -21,9 +22,14 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="border-t border-white/10 py-10 text-center text-slate-400">
+      <motion.footer
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="border-t border-white/10 py-10 text-center text-slate-400"
+      >
         <p>© {new Date().getFullYear()} Video Editor Portfolio. Cut with care.</p>
-      </footer>
+      </motion.footer>
     </div>
   )
 }
